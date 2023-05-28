@@ -3,6 +3,15 @@
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #733fc8;
+  --secondary-color: #48556a;
+  --terciary-color: #19202d;
+  --white: #fff;
+  --soft-white: rgba(255, 255, 255, 0.5);
+  --dark: #48556a;
+  --soft-dark: rgba(72, 85, 106, 0.5);
+}
 
 img {
   max-width: 100%;
@@ -23,5 +32,91 @@ a {
 
 body {
   margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: #cfccc4;
+}
+.main-container {
+  display: grid;
+  gap: 30px 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 282px 266px;
+  width: 1110px;
+  height: 572px;
+  margin: 165px;
+}
+.card {
+  border-radius: 8px;
+  padding: 32px 27px;
+}
+.card--light {
+  color: var(--white);
+}
+.card--dark {
+  color: var(--dark);
+}
+.card--first {
+  grid-column: 1 / 3;
+  background-color: var(--primary-color);
+}
+.card--second {
+  grid-column: 3 / 4;
+  background-color: var(--secondary-color);
+}
+.card--third {
+  grid-column: 4 / -1;
+  grid-row: 1/3;
+  background-color: var(--white);
+}
+.card--fourth {
+  grid-column: 1 / 2;
+  grid-row: 2/3;
+  background-color: var(--white);
+}
+.card--fifth {
+  grid-column: 2 / 4;
+  grid-row: 2/3;
+  background-color: var(--terciary-color);
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.card__image {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.card__image--border {
+  border: 2px solid #a775f1;
+}
+.card__user-info {
+  display: flex;
+  flex-direction: column;
+}
+.card__user-name {
+  font-size: 13px;
+  line-height: 13px;
+}
+.card__user-status {
+  font-size: 11px;
+  line-height: 11px;
+  color: var(--soft-white);
+}
+.card__user-status--dark {
+  color: var(--soft-dark);
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card__text {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--soft-white);
+}
+.card__text--dark {
+  color: var(--soft-dark);
 }
